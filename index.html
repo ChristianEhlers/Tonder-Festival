@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tønder Festival</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section id="formular">
+    
+    <form action=""> <!-- Post til x15.dk/hitme.php? -->
+        
+        <fieldset>
+            <legend>Fejlmeldingsformular</legend>
+
+        <section>
+        <input placeholder="Vælg sted" list="Lokationer" name="steder" id="steder" required>
+        <datalist id="Lokationer">
+            <option value="Telt 1"></option>
+            <option value="Telt 2"></option>
+            <option value="Telt 3"></option>
+        </datalist>
+
+    </section>
+
+    <section>
+
+        <input placeholder="Vælg profession" list="Professioner" name="arbejdsroller" id="arbejdsroller" required>
+        <datalist id="Professioner">
+            <option value="Tømrer"></option>
+            <option value="Elektriker"></option>
+            <option value="VVS"></option>
+        </datalist>
+
+    </section>
+
+    <section>
+
+        <input placeholder="Hyppige hændelser" list="HH" name="hyh" id="hyh" required>
+        <datalist id="HH">
+            <option value="Stoppet toilet"></option>
+            <option value="Kaffemaskine duer ikke"></option>
+            <option value="Toiletpapir"></option>
+        </datalist>
+
+    </section>
+
+    <section>
+
+        <textarea placeholder="Uddyb fejlmelding" name="beskrivelse" id="beskrivelse" cols="30" rows="10" required></textarea>
+    </section>
+
+    <section>
+        <input type="file">
+    </section>
+
+    <section>
+        <input placeholder="Dit navn" type="text" required>
+    </section>
+    <section>
+        <input placeholder="Dit nummer" type="number" maxlength="8" required>
+    </section>
+
+        <button> Indsend </button>
+
+        </fieldset>
+
+    </form>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

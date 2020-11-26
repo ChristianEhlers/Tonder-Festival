@@ -1,0 +1,21 @@
+#formular {
+    display: flex;
+    justify-content: center;
+}
+
+form > section {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-top: 2%;
+}
+
+textarea {
+    margin-top: 2%;
+}
+
+button {
+    margin-top: 2%;
+}
