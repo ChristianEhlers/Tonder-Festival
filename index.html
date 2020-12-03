@@ -10,45 +10,42 @@
     
     <section id="formular">
     
-    <form action=""> <!-- Post til x15.dk/hitme.php? -->
+    <form action="">
         
         <fieldset>
             <legend>Fejlmeldingsformular</legend>
 
-        <section>
+    <section>
         <input placeholder="Vælg sted" list="Lokationer" name="steder" id="steder" required>
+        <span class="tooltip" data-tooltiptext="This is a help section">
+            &#63;
+        </span>
         <datalist id="Lokationer">
             <option value="Telt 1"></option>
             <option value="Telt 2"></option>
             <option value="Telt 3"></option>
         </datalist>
-
     </section>
 
     <section>
-
         <input placeholder="Vælg profession" list="Professioner" name="arbejdsroller" id="arbejdsroller" required>
         <datalist id="Professioner">
             <option value="Tømrer"></option>
             <option value="Elektriker"></option>
             <option value="VVS"></option>
         </datalist>
-
     </section>
 
     <section>
-
         <input placeholder="Hyppige hændelser" list="HH" name="hyh" id="hyh" required>
         <datalist id="HH">
             <option value="Stoppet toilet"></option>
             <option value="Kaffemaskine duer ikke"></option>
             <option value="Toiletpapir"></option>
         </datalist>
-
     </section>
 
     <section>
-
         <textarea placeholder="Uddyb fejlmelding" name="beskrivelse" id="beskrivelse" cols="30" rows="10" required></textarea>
     </section>
 
