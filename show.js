@@ -55,7 +55,7 @@ console.log(incidents)
     });
 
     });
-    oReq.open("GET", "http://localhost:8888/Tonder-Festival/getIncidents.php");
+    oReq.open("GET", "http://localhost/Tonder-Festival/getIncidents.php");
     oReq.send();
   };
 

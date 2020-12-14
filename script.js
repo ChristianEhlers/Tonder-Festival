@@ -34,9 +34,9 @@ const manipulateForm = function (e) {
       hentet.push(o);                             // add new
       document.getElementById('json').value = JSON.stringify(hentet);   // stringify
       document.forms['form22'].submit();          // send
-      alert("Din fejlmelding blev sendt");
+      
   });
-  oReq.open("GET", "http://localhost:8888/Tonder-Festival/getIncidents.php");
+  oReq.open("GET", "http://localhost/Tonder-Festival/getIncidents.php");
   oReq.send();
 
 };
