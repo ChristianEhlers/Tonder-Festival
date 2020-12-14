@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tønder Festival</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4fb3d276ef.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header>
+        <img class="logo" src="../Tonder-Festival/img/Billede1.png" alt="logo">
+        <nav>
+            <article id="navimg">   
+            <a href=""><img src="../Tonder-Festival/img/opret-fejl.png" alt=""></a>
+            <a href='./show.html'> <img src="../Tonder-Festival/img/fejlmeld-faded.png" alt=""></a>
+            <a href="hej.html"><img src="../Tonder-Festival/img/hjælp.png" alt=""></a>
+            <a href="#"><img src="../Tonder-Festival/img/hjem.png" alt=""></a>
+            </article>
+        </nav>
+    </header>
    <section id="formular">
     
     <form name='form22' action='./receiveAndStore.php' method='post'>
         
-        <fieldset>
-            <legend>Fejlmeldingsformular</legend>
-
     <section>
-        <input placeholder="Vælg sted" list="Lokationer" name="steder" id="steder" required>
-        <span class="tooltip" data-tooltiptext="This is a help section">
-            &#63;
-        </span>
+        <input class="input" placeholder="Vælg sted" list="Lokationer" name="steder" id="steder" required>
+    
+        <div class="bottle-container">
+<div class="click-to-top"><img src="../Tonder-Festival/img/question-circle-regular.png" alt="Image 1" /><span>Tooltip text</span></div>
+        </div>
         <datalist id="Lokationer">
             <option value="Telt 1"></option>
             <option value="Telt 2"></option>
@@ -28,7 +37,7 @@
     </section>
 
     <section>
-        <input placeholder="Vælg profession" list="Professioner" name="arbejdsroller" id="arbejdsroller" required>
+        <input class="input" placeholder="Vælg profession" list="Professioner" name="arbejdsroller" id="arbejdsroller" required>
         <datalist id="Professioner">
             <option value="Tømrer"></option>
             <option value="Elektriker"></option>
@@ -37,7 +46,7 @@
     </section>
 
     <section>
-        <input placeholder="Hyppige hændelser" list="HH" name="hyh" id="hyh" required>
+        <input class="input" placeholder="Hyppige hændelser" list="HH" name="hyh" id="hyh" required>
         <datalist id="HH">
             <option value="Stoppet toilet"></option>
             <option value="Kaffemaskine duer ikke"></option>
@@ -50,23 +59,31 @@
     </section>
 
     <section>
-        <input id="fil" type="file">
+        <!--<input id="fil" type="file" placeholder="Vælg billede">-->
+       <input type="file"  accept="image/*" name="image" id="file">
+       <article id="btn-flex">
+       <label id="tilf" for="file">Tilføj billede</label>
+       <label id="someID">Slet billede</label>
+    </article>
+       <article id="holder">
+       <img id="output" width="200" />
+       </article>
     </section>
 
     <section>
-        <input id="nav" placeholder="Dit navn" type="text" required>
+        <input class="input" id="nav" placeholder="Dit navn" type="text" required>
     </section>
     <section>
-        <input id="nr" placeholder="Dit nummer" type="number" maxlength="8" required>
+        <input class="input" id="nr" placeholder="Dit nummer" type="number" maxlength="8" required>
         <input id='json' name='json' type='hidden' value='' readonly/>
+        
     </section>
 
         <button id="butt"> Indsend </button>
 
-        </fieldset>
 
     </form>
-    <p><a href='./show.html'>show</a></p>
+    
     </section>
 
     <script src="./script.js"></script>

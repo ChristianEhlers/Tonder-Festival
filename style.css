@@ -1,7 +1,159 @@
+body{
+    background-color: #E5D6B9;
+    background-image: linear-gradient(#211B0E, #E5D6B9);
+    background-repeat: no-repeat;
+    margin: 0 0 30% 0;
 
+}
+#body-show{
+
+}
+    
+.logo{
+    height: 100px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+ 
+}
+nav{
+    background-color: #2D2619;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    
+}
+#navimg{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.input{
+    width: 350px;
+    height: 30px;
+    background-color: #DACBAF;
+    border: 0;
+    box-shadow: 2px 3px #262013;
+}
+textarea{
+    background-color: #DACBAF;
+    border: 0;
+    box-shadow: 2px 3px #262013; 
+}
+button{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    height: 30px;
+    width: 200px;
+    background-color: #282114;
+    color: #D9CBAF;
+}
+#file{
+    display: none;
+}
+#tilf{
+    width: 150px;
+    height: 25px;
+    background-color: #DACBAF;
+    border: 0;
+    box-shadow: 2px 3px #262013;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-right: 15%;
+    padding-top: 2%;
+    text-align: center;
+}
+#output{
+    margin: 2%;
+    width: 200px;
+}
+#someID{
+    display: none;
+    width: 150px;
+    height: 25px;
+    background-color: #DACBAF;
+    border: 0;
+    box-shadow: 2px 3px #262013;
+    cursor: pointer;
+    margin-top: 2%;
+    padding-top: 2%;
+    text-align: center;
+}
+#btn-flex{
+    display: flex;
+}
+#article {
+    white-space: pre-line;
+    background-color: #DACBAF;
+    box-shadow: 2px 3px #262013;
+    padding: 5%;
+    margin-top: 20px;
+    
+  }
+
+#flex2{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   background-color: #2D2618;
+   width: 150px;
+   height: 30px;
+   float: right;
+   color: #DACBAF;
+   margin-top: -14px;
+   margin-right: -18px;
+}
+#flex2 img{
+    height: 10px;
+    margin-left: 20%;
+    margin-right: 10%;
+    
+ }
+
+#ff{
+    background-color: red;
+}
 #formular {
     display: flex;
     justify-content: center;
+}
+
+.fejlm{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 2%;
+}
+
+#input-overskrift{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #DACBAF;  
+    margin: 0px 19px 0px 19px;
+}
+#input-overskrift input{
+    height: 30px;
+    width: 150px;
+}
+
+#sendt{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10% 2% 0 2%; 
+    background-color: #DACBAF;
+    box-shadow: 2px 3px #262013;
+    text-align: center;
+    color: #262013;
+    height: 300px;
+}
+a:link{
+    text-decoration: none;
 }
 
 form > section {
@@ -21,41 +173,36 @@ button {
     margin-top: 2%;
 }
 
-/*Tooltip testing*/
-span {
-    display: inline-block;
-    width: 1vw;
-    height: 1vw;
+
+
+
+container{
+max-width:600px;
+margin:0 auto;
+min-height:450px;
 }
 
-.tooltip {
-    position: relative;
-    border: 1px solid black;
-    border-radius: 100%;
+div.click-to-top {
+display:inline-block;
+position:relative;
 }
 
-.tooltip:before {
-    content: attr(data-tooltiptext);
-    position: absolute;
-    /* vertically center */
-    top:50%;
-    transform:translateY(-50%);
-    
-    /* move to right */
-    left: 100%;
-    margin-left: 0.5vw; /* and add a small left margin */
-  
-    /* basic styles */
-    width:200px;
-    padding:10px;
-    border-radius:10px;
-    background:#000;
-    color: #fff;
-    text-align:center;
-
-    display: none;
+div.click-to-top:hover{
+z-index:2;
+width: 100px;
 }
 
-.tooltip:hover:before {
-    display: block;
-} 
+div.click-to-top img{
+-webkit-transition: all 0.8s;
+moz-transition: all 0.8s;
+transition: all 0.8s;
+
+}
+
+div.click-to-top img:hover{
+
+z-index:10;
+}
+
+div.click-to-top span {display: none; position: absolute; bottom: 0; left:5 0; right: 0; background: #333; color: #fff; }
+div.click-to-top:hover span {display: block; }

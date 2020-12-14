@@ -20,6 +20,7 @@ const manipulateForm = function (e) {
       var time = dateStr.getHours()
       var min = dateStr.getMinutes()
       var dato = day + "/" + mon + "/" + year + ' - ' + time + ':' + min;
+      
       let o = {
           Sted: loka,
           Arbejdsrolle: prof,
@@ -34,11 +35,10 @@ const manipulateForm = function (e) {
       hentet.push(o);                             // add new
       document.getElementById('json').value = JSON.stringify(hentet);   // stringify
       document.forms['form22'].submit();          // send
-      alert("Din fejlmelding blev sendt");
   });
   oReq.open("GET", "http://localhost:8888/Tonder-Festival/getIncidents.php");
   oReq.send();
-
+ 
 };
 const doThis = function () {
  

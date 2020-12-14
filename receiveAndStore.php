@@ -1,3 +1,3 @@
 <?php
 file_put_contents('./data/incidents.json', $_POST['json']);
-header('Location: ./show.html');
+header('Location: ./sendt.html');
