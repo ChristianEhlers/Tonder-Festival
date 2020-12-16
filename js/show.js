@@ -23,7 +23,7 @@ const readIncidents = function () {
                             '<p>' +'<strong>Nummer: </strong>' + a.Nummer + '<p/>' +
                             '<p>'+'<strong>Dato: </strong>' + a.Dato + '<p/>' + '<article id="flex2">'+
                             '<p>' + 'Ikke Løst' + '</p>'+ 
-                            '<img id="hej4" src="../Tonder-Festival/img/kryds-ikke-løst.png" alt="logo">'+'</article>' +
+                            '<img src="../Tonder-Festival/img/kryds-ikke-løst.png" alt="logo">'+'</article>' +
                           '</article>' 
                           
                   }).join('');
@@ -31,35 +31,35 @@ const readIncidents = function () {
             
                 app.innerHTML = fejlmeldHTMLString;
               }
-              render(incidents);
+              render(incidents); // render fremviser vores fejlmeldinger 
         }
 console.log(incidents)
     
     const searchBar = document.getElementById('myinput');
-    
-    searchBar.addEventListener('keyup', (e) => {
+    // inspiration fra https://www.jamesqquick.com/blog/build-a-javascript-search-bar
+    searchBar.addEventListener('keyup', function(e) {
         const searchString = e.target.value.toLowerCase();
     
-        const filteredCharacters = incidents.filter((character) => {
+        const filteredFejlmeld = incidents.filter((fejlmeld) => {
             return (
-                character.Sted.toLowerCase().includes(searchString) || 
-                character.Navn.toLowerCase().includes(searchString) || 
-                character.Beskrivelse.toLowerCase().includes(searchString) || 
-                character.Nummer.toLowerCase().includes(searchString) ||  
-                character.Hyppigehændelser.toLowerCase().includes(searchString) ||  
-                character.Dato.includes(searchString) || 
-                character.Arbejdsrolle.toLowerCase().includes(searchString)
+              fejlmeld.Sted.toLowerCase().includes(searchString) || 
+              fejlmeld.Navn.toLowerCase().includes(searchString) || 
+              fejlmeld.Beskrivelse.toLowerCase().includes(searchString) || 
+              fejlmeld.Nummer.toLowerCase().includes(searchString) ||  
+              fejlmeld.Hyppigehændelser.toLowerCase().includes(searchString) ||  
+              fejlmeld.Dato.includes(searchString) || 
+              fejlmeld.Arbejdsrolle.toLowerCase().includes(searchString)
             );
         });
-        render(filteredCharacters);
+        render(filteredFejlmeld);
     });
 
     });
-    oReq.open("GET", "http://localhost:8888/Tonder-Festival/getIncidents.php");
+    oReq.open("GET", "http://localhost/Tonder-Festival/getIncidents.php");
     oReq.send();
   };
 
-  var search = document.getElementById('myinput');
+  
     
   const doThis = function () {
     readIncidents();  
