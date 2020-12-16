@@ -23,7 +23,7 @@ const readIncidents = function () {
                             '<p>' +'<strong>Nummer: </strong>' + a.Nummer + '<p/>' +
                             '<p>'+'<strong>Dato: </strong>' + a.Dato + '<p/>' + '<article id="flex2">'+
                             '<p>' + 'Ikke Løst' + '</p>'+ 
-                            '<img id="hej4" src="../Tonder-Festival/img/kryds-ikke-løst.png" alt="logo">'+'</article>' +
+                            '<img src="../Tonder-Festival/img/kryds-ikke-løst.png" alt="logo">'+'</article>' +
                           '</article>' 
                           
                   }).join('');
