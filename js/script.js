@@ -46,15 +46,13 @@ const doThis = function () {
 };
 window.addEventListener('load', doThis);
 
-document.getElementById('file').onchange = function() {loadFile(event)};
-var loadFile = function(event) {
+// inspiration fra https://schibsted.com/blog/the-magic-of-createobjecturl/
+document.getElementById('file').addEventListener('change', function(event){ 
 	var image = document.getElementById('output');
   image.src = URL.createObjectURL(event.target.files[0]);
-  
   document.getElementById('someID').style.display = 'block'
  
-  
-}
+})
 
 document.getElementById("someID").addEventListener('click', function(){
   var input = document.getElementById('output');
